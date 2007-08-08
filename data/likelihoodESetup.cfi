@@ -1,0 +1,62 @@
+# ESSource for Electron ID likelihood
+es_source = ElectronLikelihoodESSource {
+
+    // temporary: ROOT files containing PDFs
+    FileInPath pdfEBlt15FileName="EgammaAnalysis/ElectronIDESSources/data/EBlt15pdfs.root"
+    FileInPath pdfEBgt15FileName="EgammaAnalysis/ElectronIDESSources/data/EBgt15pdfs.root"
+    FileInPath pdfEElt15FileName="EgammaAnalysis/ElectronIDESSources/data/EElt15pdfs.root"
+    FileInPath pdfEEgt15FileName="EgammaAnalysis/ElectronIDESSources/data/EEgt15pdfs.root"
+    
+    // coefficients for the linear shape Fisher discriminant
+    FileInPath fisherEBFileName="EgammaAnalysis/ElectronIDESSources/data/likelihoodShapeFisherEcalBarrel.spr"
+    FileInPath fisherEEFileName="EgammaAnalysis/ElectronIDESSources/data/likelihoodShapeFisherEcalEndcap.spr"
+    
+    // a priori probabilities (class fractions). Use flat priors for now
+    double eleEBGoldenFracLt15     = 1.0
+    double eleEBBigbremFracLt15    = 1.0
+    double eleEBNarrowFracLt15     = 1.0
+    double eleEBShoweringFracLt15  = 1.0
+    double piEBGoldenFracLt15      = 1.0
+    double piEBBigbremFracLt15     = 1.0
+    double piEBNarrowFracLt15      = 1.0
+    double piEBShoweringFracLt15   = 1.0
+    
+    double eleEBGoldenFracGt15     = 1.0
+    double eleEBBigbremFracGt15    = 1.0
+    double eleEBNarrowFracGt15     = 1.0
+    double eleEBShoweringFracGt15  = 1.0
+    double piEBGoldenFracGt15      = 1.0
+    double piEBBigbremFracGt15     = 1.0
+    double piEBNarrowFracGt15      = 1.0
+    double piEBShoweringFracGt15   = 1.0
+    
+    double eleEEGoldenFracLt15     = 1.0
+    double eleEEBigbremFracLt15    = 1.0
+    double eleEENarrowFracLt15     = 1.0
+    double eleEEShoweringFracLt15  = 1.0
+    double piEEGoldenFracLt15      = 1.0
+    double piEEBigbremFracLt15     = 1.0
+    double piEENarrowFracLt15      = 1.0
+    double piEEShoweringFracLt15   = 1.0
+    
+    double eleEEGoldenFracGt15     = 1.0
+    double eleEEBigbremFracGt15    = 1.0
+    double eleEENarrowFracGt15     = 1.0
+    double eleEEShoweringFracGt15  = 1.0
+    double piEEGoldenFracGt15      = 1.0
+    double piEEBigbremFracGt15     = 1.0
+    double piEENarrowFracGt15      = 1.0
+    double piEEShoweringFracGt15   = 1.0
+
+    // a priori probabilies having an electron/hadron (cross sections)
+    double eleWeight = 1.
+    double piWeight = 1.
+
+    // pdfs switches
+    double useDeltaEtaCalo = 1
+    double useDeltaPhiIn = 1
+    double useHoverE = 1
+    double useEoverPOut = 1
+    double useShapeFisher = 1
+
+}
