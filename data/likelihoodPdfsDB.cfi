@@ -1,0 +1,13 @@
+include "CondCore/DBCommon/data/CondDBCommon.cfi"
+replace CondDBCommon.connect = "sqlite_file:/afs/cern.ch/user/e/emanuele/scratch0/vanilla131HLT6/src/EgammaAnalysis/ElectronIDAlgos/test/electronlikelihood.db"    
+replace CondDBCommon.catalog = "file:/afs/cern.ch/user/e/emanuele/scratch0/vanilla131HLT6/src/EgammaAnalysis/ElectronIDAlgos/test/mycatalog.xml"
+
+es_source = PoolDBESSource { 
+    using CondDBCommon
+    VPSet toGet = { 
+	{ 
+	    string record = "ElectronLikelihoodPdfsRcd"
+	    string tag ="ElectronLikelihoodPdfsRcd_tag"
+	}
+    }
+}
