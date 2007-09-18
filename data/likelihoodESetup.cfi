@@ -1,17 +1,22 @@
 # ESSource for Electron ID likelihood
-es_source = ElectronLikelihoodESSource {
+es_module = ElectronLikelihoodESSource {
 
-    // temporary: ROOT files containing PDFs
-    FileInPath pdfEBlt15FileName="EgammaAnalysis/ElectronIDESSources/data/EBlt15pdfs.root"
-    FileInPath pdfEBgt15FileName="EgammaAnalysis/ElectronIDESSources/data/EBgt15pdfs.root"
-    FileInPath pdfEElt15FileName="EgammaAnalysis/ElectronIDESSources/data/EElt15pdfs.root"
-    FileInPath pdfEEgt15FileName="EgammaAnalysis/ElectronIDESSources/data/EEgt15pdfs.root"
-    
     // coefficients for the linear shape Fisher discriminant
     FileInPath fisherEBFileName="EgammaAnalysis/ElectronIDESSources/data/likelihoodShapeFisherEcalBarrel.spr"
     FileInPath fisherEEFileName="EgammaAnalysis/ElectronIDESSources/data/likelihoodShapeFisherEcalEndcap.spr"
+
+    // a priori weights splitting rule
+    string signalWeightSplitting = "fullclass"
+    string backgroundWeightSplitting = "fullclass"
+#    string signalWeightSplitting = "class"
+#    string backgroundWeightSplitting = "class"
+
+    // use dedicated PDF's for each class defined by 
+    // signalWeightSplitting category
+    bool splitSignalPdfs = true
+    bool splitBackgroundPdfs = false
     
-    // a priori probabilities (class fractions). Use flat priors for now
+    // a priori probabilities (fullclass fractions). Use flat priors for now
     double eleEBGoldenFracLt15     = 1.0
     double eleEBBigbremFracLt15    = 1.0
     double eleEBNarrowFracLt15     = 1.0
