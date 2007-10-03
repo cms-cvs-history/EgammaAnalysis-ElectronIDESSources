@@ -1,6 +1,5 @@
 include "CondCore/DBCommon/data/CondDBCommon.cfi"
-replace CondDBCommon.connect = "sqlite_file:/afs/cern.ch/user/e/emanuele/public/electronLikelihoodDb/electronIdLikelihood.db"
-replace CondDBCommon.catalog = "file:/afs/cern.ch/user/e/emanuele/public/electronLikelihoodDb/likelihoodcatalog.xml"
+replace CondDBCommon.connect = "sqlite_fip:electronIdLikelihood.db"
 
 es_source = PoolDBESSource { 
     using CondDBCommon
