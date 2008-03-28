@@ -1,8 +1,0 @@
-<use name=FWCore/Framework>
-<use name=CondFormats/DataRecord>
-<use name=EgammaAnalysis/ElectronIDAlgos>
-<export>
-  <lib name=EgammaAnalysisElectronIDESSources>
-  <use name=FWCore/Framework>
-  <use name=CondFormats/DataRecord>
-</export>
